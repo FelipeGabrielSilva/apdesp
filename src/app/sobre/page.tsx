@@ -8,25 +8,25 @@ const Sobre = () => {
       icon: Target,
       title: "Missão",
       description:
-        "Promover o desenvolvimento econômico sustentável do Estado de São Paulo através de políticas públicas eficientes e inovadoras.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       icon: Users,
       title: "Visão",
       description:
-        "Ser referência nacional em desenvolvimento regional, criando oportunidades e melhorando a qualidade de vida da população paulista.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       icon: Lightbulb,
       title: "Inovação",
       description:
-        "Fomentar a inovação e o empreendedorismo como pilares fundamentais para o crescimento econômico sustentável.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       icon: Shield,
       title: "Transparência",
       description:
-        "Garantir transparência e accountability em todas as nossas ações, promovendo a confiança e participação cidadã.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
   ];
 
