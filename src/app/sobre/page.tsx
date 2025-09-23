@@ -8,25 +8,19 @@ const Sobre = () => {
       icon: Target,
       title: "Missão",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Promover a inclusão e a equidade para pessoas com deficiência, fornecendo suporte integral, recursos e oportunidades que fomentem seu desenvolvimento pessoal, social e profissional.",
     },
     {
       icon: Users,
       title: "Visão",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Imaginamos um mundo onde pessoas com deficiência possam viver plenamente e com dignidade, integradas em todas as esferas da sociedade, onde cada indivíduo tenha a liberdade e as oportunidades necessárias para alcançar seu pleno potencial.",
     },
     {
       icon: Lightbulb,
       title: "Inovação",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    },
-    {
-      icon: Shield,
-      title: "Transparência",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Acreditamos que a diversidade enriquece a sociedade. Nos comprometemos a garantir que todas as vozes sejam ouvidas e que cada pessoa com deficiência tenha acesso a oportunidades e recursos.",
     },
   ];
 
@@ -93,7 +87,7 @@ const Sobre = () => {
       </div>
 
       {/* --- Seção de Valores (COM O CÓDIGO REFATORADO) --- */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto my-8 p-4 sm:p-8 md:p-12 lg:p-16 min-h-[60vh]">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto my-8 p-4 sm:p-8 md:p-12 lg:px-32 min-h-[60vh]">
         {values.map((value, index) => (
           // O <Card> e <CardContent> foram combinados neste único <div>.
           // Adicionamos padding (p-8), cantos arredondados (rounded-xl) e estilos de fundo/sombra.

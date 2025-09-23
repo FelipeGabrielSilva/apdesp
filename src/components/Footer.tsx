@@ -38,7 +38,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  contato@apdesp.org.br
+                  apdesp4@gmail.com
                 </span>
               </div>
             </div>
@@ -48,6 +48,13 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-primary">Links Úteis</h3>
             <nav className="flex flex-col space-y-2">
+              <a
+                href="/"
+                className="text-sm text-muted-foreground hover:text-primary transition-smooth"
+                style={{ width: "15%" }}
+              >
+                Início
+              </a>
               <a
                 href="/sobre"
                 className="text-sm text-muted-foreground hover:text-primary transition-smooth"
@@ -61,13 +68,6 @@ const Footer = () => {
                 style={{ width: "30%" }}
               >
                 Transparência
-              </a>
-              <a
-                href="#"
-                className="text-sm text-muted-foreground hover:text-primary transition-smooth"
-                style={{ width: "15%" }}
-              >
-                Projetos
               </a>
               <a
                 href="#"

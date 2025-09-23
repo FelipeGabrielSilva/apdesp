@@ -1,5 +1,3 @@
-// Arquivo: app/transparencia/page.tsx
-
 import {
   FileText,
   Users,
@@ -17,54 +15,88 @@ export const metadata: Metadata = {
 };
 
 const documentsByYear = {
-  "2025": [
-    {
-      title: "Relatório Anual de Atividades 2025",
-      fileUrl: "#",
-      uploadedAt: "2025-09-22",
-      category: "Relatório Anual",
-    },
-    {
-      title: "Balanço Financeiro 2025",
-      fileUrl: "#",
-      uploadedAt: "2025-08-15",
-      category: "Financeiro",
-    },
-  ],
+  "2025": [],
   "2024": [
     {
       title: "Relatório Anual de Atividades 2024",
-      fileUrl: "#",
-      uploadedAt: "2024-07-30",
+      fileUrl: "/pdf/RELATORIO_ATIVIDADES_2024.pdf",
+      uploadedAt: "2025-09-23",
       category: "Relatório Anual",
     },
     {
-      title: "Balanço Financeiro 2024",
-      fileUrl: "#",
-      uploadedAt: "2024-06-20",
-      category: "Financeiro",
+      title: "Relatório Fotográtifico 2024",
+      fileUrl: "/pdf/RELATORIO_FOTOGRAFICO_2024.pdf",
+      uploadedAt: "2025-09-23",
+      category: "Relatório Fotográfico",
+    },
+  ],
+  "2023": [
+    {
+      title: "Relatório Anual de Atividades 2023",
+      fileUrl: "/pdf/RELATORIO_ATIVIDADES_2023.pdf",
+      uploadedAt: "2025-09-23",
+      category: "Relatório Anual",
+    },
+    {
+      title: "Relatório Fotográtifico 2023",
+      fileUrl: "/pdf/RELATORIO_FOTOGRAFICO_2023.pdf",
+      uploadedAt: "2025-09-23",
+      category: "Relatório Fotográfico",
+    },
+  ],
+  "2022": [
+    {
+      title: "Relatório Anual de Atividades 2022",
+      fileUrl: "/pdf/RELATORIO_ATIVIDADES_2022.pdf",
+      uploadedAt: "2025-09-23",
+      category: "Relatório Anual",
     },
   ],
 };
 
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
-  // Adiciona a correção de fuso horário para evitar problemas de data "um dia antes"
   date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
   return date.toLocaleDateString("pt-BR");
 };
 
 const permanentDocuments = [
-  { title: "Estatuto Social", icon: ShieldCheck, fileUrl: "#" },
-  { title: "Certidão Negativa de Débitos", icon: ShieldCheck, fileUrl: "#" },
-  { title: "Certidão CNPJ", icon: ShieldCheck, fileUrl: "#" },
+  {
+    title: "Estatuto Social",
+    icon: ShieldCheck,
+    fileUrl: "/pdf/ESTATUTO.pdf",
+  },
+  {
+    title: "Certidão CNPJ",
+    icon: ShieldCheck,
+    fileUrl: "/pdf/CNPJ.pdf",
+  },
+  {
+    title: "Certificado de Registro em Cartório",
+    icon: ShieldCheck,
+    fileUrl: "/pdf/CERTIFICADO_REGISTRO_CARTORIO.pdf",
+  },
+  {
+    title: "Declaração de Funcionamento",
+    icon: ShieldCheck,
+    fileUrl: "/pdf/DECLARACAO_FUNCIONAMENTO.pdf",
+  },
+  {
+    title: "Inscrição no Conselho Municipal",
+    icon: ShieldCheck,
+    fileUrl: "/pdf/INSCRICAO_MUNICIPAL.pdf",
+  },
+  {
+    title: "Sede Estatuária",
+    icon: ShieldCheck,
+    fileUrl: "/pdf/SEDE_ESTATUARIA.pdf",
+  },
 ];
 
 const governanceMembers = [
-  { name: "Nome do Presidente(a)", role: "Presidente" },
-  { name: "Nome do Vice-Presidente(a)", role: "Vice-Presidente" },
-  { name: "Nome do Tesoureiro(a)", role: "Tesoureiro(a)" },
-  { name: "Nome do Secretário(a)", role: "Secretário(a)" },
+  { name: "Claudomiro de Souza", role: "Presidente" },
+  { name: "Adriana Aparecida de Souza", role: "Vice-Presidente" },
+  { name: "Daniela Bavaresco de Carvalho", role: "Tesoureira" },
 ];
 
 const partners = [
@@ -86,7 +118,6 @@ const partners = [
   },
 ];
 
-// --- Componente Principal da Página ---
 const TransparenciaPage = () => {
   return (
     <section id="transparencia">
@@ -184,11 +215,11 @@ const TransparenciaPage = () => {
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
             Governança
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             {governanceMembers.map((member) => (
               <div
                 key={member.name}
-                className="p-6 rounded-lg shadow-sm bg-white/50 border"
+                className="p-6 rounded-lg shadow-sm bg-white/50 border border-gray-200"
               >
                 <h4 className="font-bold text-lg text-primary">
                   {member.name}
