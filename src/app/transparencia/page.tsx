@@ -1,9 +1,7 @@
 import {
-  FileText,
-  Users,
-  Handshake,
-  ShieldCheck,
   Download,
+  FileText,
+  ShieldCheck
 } from "lucide-react";
 import { Metadata } from "next";
 
@@ -15,19 +13,30 @@ export const metadata: Metadata = {
 };
 
 const documentsByYear = {
-  "2025": [],
+  "2025": [{
+      title: "Curso de Cuidador de Idosos 2025",
+      fileUrl: "/pdf/CURSO_CUIDADOR_DE_IDOSOS_2025.pdf",
+      uploadedAt: "2025-10-03",
+      category: "Curso",
+    },
+    {
+      title: "Curso de Libras Básico 2025",
+      fileUrl: "/pdf/RELATORIO_FOTOGRAFICO_2024.pdf",
+      uploadedAt: "2025-10-03",
+      category: "Curso",
+    },],
   "2024": [
     {
       title: "Relatório Anual de Atividades 2024",
       fileUrl: "/pdf/RELATORIO_ATIVIDADES_2024.pdf",
       uploadedAt: "2025-09-23",
-      category: "Relatório Anual",
+      category: "Anual",
     },
     {
       title: "Relatório Fotográtifico 2024",
       fileUrl: "/pdf/RELATORIO_FOTOGRAFICO_2024.pdf",
       uploadedAt: "2025-09-23",
-      category: "Relatório Fotográfico",
+      category: "Fotográfico",
     },
   ],
   "2023": [
@@ -35,13 +44,13 @@ const documentsByYear = {
       title: "Relatório Anual de Atividades 2023",
       fileUrl: "/pdf/RELATORIO_ATIVIDADES_2023.pdf",
       uploadedAt: "2025-09-23",
-      category: "Relatório Anual",
+      category: "Anual",
     },
     {
       title: "Relatório Fotográtifico 2023",
       fileUrl: "/pdf/RELATORIO_FOTOGRAFICO_2023.pdf",
       uploadedAt: "2025-09-23",
-      category: "Relatório Fotográfico",
+      category: "Fotográfico",
     },
   ],
   "2022": [
@@ -49,7 +58,7 @@ const documentsByYear = {
       title: "Relatório Anual de Atividades 2022",
       fileUrl: "/pdf/RELATORIO_ATIVIDADES_2022.pdf",
       uploadedAt: "2025-09-23",
-      category: "Relatório Anual",
+      category: "Anual",
     },
   ],
 };
@@ -90,6 +99,11 @@ const permanentDocuments = [
     title: "Sede Estatuária",
     icon: ShieldCheck,
     fileUrl: "/pdf/SEDE_ESTATUARIA.pdf",
+  },
+  {
+    title: "Inscrição CMSA",
+    icon: ShieldCheck,
+    fileUrl: "/pdf/CERTIFICADO_INSCRICAO_CMSA.pdf",
   },
 ];
 
