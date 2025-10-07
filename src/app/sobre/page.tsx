@@ -1,6 +1,8 @@
-import { Lightbulb, Shield, Target, Users } from "lucide-react";
-import Image from "next/image";
 import sedeApdesp from "@/assets/sede-apdesp.jpg";
+import residenciaInclusiva from "@/assets/residencia-inclusiva/predio.jpg";
+import { Lightbulb, Target, Users } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Sobre = () => {
   const values = [
@@ -24,6 +26,21 @@ const Sobre = () => {
     },
   ];
 
+  const images = [
+    {
+      id: 1,
+      path: sedeApdesp,
+      alt: "Foto do prédio da APDESP",
+      title: "Sede APDESP - Assis",
+    },
+    {
+      id: 2,
+      path: residenciaInclusiva,
+      alt: "Teste",
+      title: "Inauguração residência inclusiva - Assis",
+    },
+  ];
+
   return (
     <section id="Sobre">
       <div
@@ -36,7 +53,6 @@ const Sobre = () => {
         style={{ background: "#eff6ff", opacity: 80 }}
       >
         <div className="max-w-3xl">
-          {" "}
           {/* Wrapper para controlar a largura do texto */}
           <h2
             className="text-4xl md:text-5xl font-bold text-white mb-6"
@@ -69,19 +85,42 @@ const Sobre = () => {
             contando com a ajuda de 37 voluntários de diversas áreas.
           </p>
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed text-justify">
-            Entre suas principais conquistas, destaca-se a criação da Residência
-            Inclusiva, um projeto pioneiro na região que oferece moradia e
-            autonomia para pessoas com deficiência em situação de
-            vulnerabilidade social.
+            Entre suas principais conquistas, destaca-se a criação da{" "}
+            <Link
+              href="/projetos"
+              style={{ color: "blue", textOverflow: "clip" }}
+            >
+              Residência Inclusiva
+            </Link>
+            , um projeto pioneiro na região que oferece moradia e autonomia para
+            pessoas com deficiência em situação de vulnerabilidade social.
           </p>
         </div>
         <div className="relative p-8 sm:p-8 md:p-12 lg:p-16">
-          <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center sm:px-8 ">
-            <Image
-              src={sedeApdesp}
-              alt="APDESP Logo"
-              className="h-full w-full object-contain"
-            />
+          <div
+            className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex column items-center justify-center sm:px-8"
+            style={{
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 16,
+            }}
+          >
+            {images.map((item) => (
+              <div
+                key={item.id}
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                <Image
+                  src={item.path}
+                  alt={item.alt}
+                  className="h-full w-full object-contain"
+                />
+                <p>{item.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

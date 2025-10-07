@@ -1,11 +1,25 @@
 import heroImage from "@/assets/hero-apdesp.jpg";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Heart, Phone, Target, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  Heart,
+  Phone,
+  Target,
+  Users,
+  House,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Card from "@/components/Card";
 
 const Home = () => {
   const services = [
+    {
+      icon: House,
+      title: "Residência Inclusiva",
+      description: "Moradia digna e autonomia para pessoas com deficiência.",
+    },
     {
       icon: Heart,
       title: "Apoio Psicossocial",
@@ -51,12 +65,13 @@ const Home = () => {
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              Promovendo Inclusão e
-              <span className="text-secondary-light"> Dignidade</span>
+              Promovendo Inclusão, Dignidade e
+              <span className="text-secondary-light"> Moradia</span>
             </h1>
             <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
               A APDESP dedica-se ao apoio de pessoas com deficiência,
-              construindo uma sociedade mais justa e inclusiva para todos.
+              construindo uma sociedade mais justa e moradia inclusiva para
+              todos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
@@ -65,6 +80,16 @@ const Home = () => {
                   className="flex items-center justify-center"
                 >
                   Conheça Nossa História
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
+
+              <Button className="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+                <Link
+                  href="/projetos"
+                  className="flex items-center justify-center"
+                >
+                  Projetos
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
@@ -100,27 +125,12 @@ const Home = () => {
           {/* O seu grid responsivo já estava ótimo, mantivemos! */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div
+              <Card
                 key={index}
-                className="group flex flex-col items-center text-center p-8 border border-white/20 bg-white backdrop-blur-sm shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 rounded-2xl"
-              >
-                {/* O círculo do ícone permanece o mesmo, pois já usava Tailwind puro */}
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-200 group-hover:bg-blue-950 mb-6 transition-colors duration-300">
-                  <service.icon className="h-8 w-8 text-blue-400" />
-                </div>
-
-                {/* DE: <CardTitle>
-          PARA: <h3> - Título do card. */}
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  {service.title}
-                </h3>
-
-                {/* DE: <CardDescription>
-          PARA: <p> - Descrição do card. */}
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+                title={service.title}
+                children={<service.icon className="h-8 w-8 text-blue-400" />}
+                description={service.description}
+              />
             ))}
           </div>
         </div>
@@ -140,8 +150,7 @@ const Home = () => {
             </p>
             <div className="px-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center justify-center">
-                Como Ajudar
-                <Heart className="w-5 h-5 ml-2" />
+                <Link href="/comoajudar">Como Ajudar</Link>
               </Button>
 
               <Button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
