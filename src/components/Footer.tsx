@@ -76,7 +76,7 @@ const Footer = () => {
               <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-primary transition-smooth"
-                style={{ width: "30%" }}
+                style={{ width: "40%" }}
               >
                 Como Ajudar
               </a>

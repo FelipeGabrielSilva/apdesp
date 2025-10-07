@@ -12,6 +12,7 @@ const Header = () => {
   const navigation = [
     { name: "Início", href: "/" },
     { name: "Sobre", href: "/sobre" },
+    { name: "Projetos", href: "/projetos" },
     { name: "Transparência", href: "/transparencia" },
   ];
 
@@ -70,7 +71,7 @@ const Header = () => {
             {/* Mobile menu Button */}
             <Button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-md text-foreground hover:text-primary hover:bg-accent transition-smooth"
+              className="sm:hiddenmd:hidden lg:hidden p-2 rounded-md text-foreground hover:text-primary hover:bg-accent transition-smooth"
               aria-label="Menu"
             >
               {isMenuOpen ? (
