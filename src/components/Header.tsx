@@ -99,7 +99,7 @@ const Header = () => {
               ))}
               <div className="px-4 pt-2">
                 <Button variant="admin" size="sm" asChild className="w-full">
-                  <Link href="/login">
+                  <Link href="/administrativo/login">
                     <LogIn className="w-4 h-4 mr-2" />
                     Login
                   </Link>
