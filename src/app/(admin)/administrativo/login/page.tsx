@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Mail, Lock, User } from "lucide-react"; // Usaremos o 'User' para o logo
+import { Mail, Lock, User } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Login | APDESP",
+  title: "APDESP - Login",
   description: "Acesse a plataforma restrita da APDESP.",
 };
 
@@ -84,7 +84,6 @@ const LoginPage = () => {
                 </div>
               </div>
 
-              {/* Botão de Envio */}
               <button
                 type="submit"
                 className="w-full rounded-lg bg-blue-600 py-3 text-lg font-semibold text-white shadow-sm transition-all duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -93,11 +92,10 @@ const LoginPage = () => {
               </button>
             </form>
 
-            {/* Links Secundários */}
             <p className="mt-8 text-center text-sm text-slate-600">
               Ainda não tem uma conta?{" "}
               <Link
-                href="/cadastro"
+                href="/administrativo/cadastro"
                 className="font-medium text-blue-600 hover:underline"
               >
                 Cadastre-se

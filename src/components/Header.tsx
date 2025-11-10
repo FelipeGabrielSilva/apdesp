@@ -41,7 +41,6 @@ const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link
@@ -54,7 +53,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Login Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <Button
               variant="admin"
@@ -62,13 +60,12 @@ const Header = () => {
               asChild
               className="hidden sm:inline-flex"
             >
-              <Link href="/login">
+              <Link href="/administrativo/login">
                 <LogIn className="w-4 h-4 mr-2" />
                 Login
               </Link>
             </Button>
 
-            {/* Mobile menu Button */}
             <Button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="sm:hiddenmd:hidden lg:hidden p-2 rounded-md text-foreground hover:text-primary hover:bg-accent transition-smooth"
@@ -83,7 +80,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-border bg-background py-4">
             <nav className="flex flex-col space-y-2">
