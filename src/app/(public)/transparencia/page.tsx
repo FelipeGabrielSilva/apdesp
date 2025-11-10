@@ -1,8 +1,4 @@
-import {
-  Download,
-  FileText,
-  ShieldCheck
-} from "lucide-react";
+import { Download, FileText, ShieldCheck } from "lucide-react";
 import { Metadata } from "next";
 
 // Metadata para SEO da página
@@ -13,7 +9,8 @@ export const metadata: Metadata = {
 };
 
 const documentsByYear = {
-  "2025": [{
+  "2025": [
+    {
       title: "Curso de Cuidador de Idosos 2025",
       fileUrl: "/pdf/CURSO_CUIDADOR_DE_IDOSOS_2025.pdf",
       uploadedAt: "2025-10-03",
@@ -24,7 +21,8 @@ const documentsByYear = {
       fileUrl: "/pdf/RELATORIO_FOTOGRAFICO_2024.pdf",
       uploadedAt: "2025-10-03",
       category: "Curso",
-    },],
+    },
+  ],
   "2024": [
     {
       title: "Relatório Anual de Atividades 2024",
@@ -135,13 +133,11 @@ const partners = [
 const TransparenciaPage = () => {
   return (
     <section id="transparencia">
-      {/* ESTILO GLOBAL: Fundo radial importado da página Sobre */}
       <div
         className="fixed inset-0 -z-10 h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,112,243,0.1),transparent)]"
         aria-hidden="true"
       />
 
-      {/* ESTILO HERO: Estilo do cabeçalho alinhado com a página Sobre */}
       <div className="text-center mb-16 px-4 py-16 md:px-4 flex flex-col justify-center items-center min-h-[60vh] bg-blue-50/80">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">
@@ -154,15 +150,12 @@ const TransparenciaPage = () => {
         </div>
       </div>
 
-      {/* Container principal para o conteúdo, com padding responsivo */}
       <div className="px-4 pb-16 m:px-6 lg:px-32">
-        {/* --- Seção de Documentos --- */}
         <div className="mb-16 md:mb-24">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
             Documentos Essenciais
           </h2>
 
-          {/* ESTILO CARDS: Cards de documento agora seguem o novo design */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {permanentDocuments.map((doc) => (
               <a
@@ -201,11 +194,9 @@ const TransparenciaPage = () => {
                     >
                       <FileText className="h-8 w-8 mr-4 flex-shrink-0" />
 
-                      {/* MUDANÇA: Novo container para o texto para melhor organização vertical */}
                       <div className="flex flex-col items-start text-left">
                         <span className="font-semibold ">{doc.title}</span>
 
-                        {/* MUDANÇA: Linha de metadados com Categoria e Data */}
                         <div className="flex items-center gap-x-2 mt-1">
                           <span className="text-xs font-medium px-2 py-0.5 bg-blue-100 text-blue-800 rounded-full dark:bg-blue-900 dark:text-blue-200">
                             {doc.category}
@@ -224,7 +215,6 @@ const TransparenciaPage = () => {
             ))}
         </div>
 
-        {/* --- Seção de Governança --- */}
         <div className="mb-16 md:mb-24">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
             Governança
@@ -244,7 +234,6 @@ const TransparenciaPage = () => {
           </div>
         </div>
 
-        {/* --- Seção de Parcerias --- */}
         <div>
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
             Parcerias e Apoio

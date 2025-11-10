@@ -8,7 +8,7 @@ import { Metadata } from "next";
 // Metadata para SEO da página
 export const metadata: Metadata = {
   title: "APDESP - Sobre",
-  description: "Conheça nossa história e associação"
+  description: "Conheça nossa história e associação",
 };
 
 const Sobre = () => {
@@ -54,13 +54,11 @@ const Sobre = () => {
         className="fixed inset-0 -z-10 h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,112,243,0.1),transparent)]"
         aria-hidden="true"
       />
-      {/* --- Seção de Introdução (sem alterações) --- */}
       <div
         className="text-center mb-16 px-4 py-16 md:px-4 flex flex-col justify-center items-center min-h-[60vh]"
         style={{ background: "#eff6ff", opacity: 80 }}
       >
         <div className="max-w-3xl">
-          {/* Wrapper para controlar a largura do texto */}
           <h2
             className="text-4xl md:text-5xl font-bold text-white mb-6"
             style={{ color: "#4285f4" }}
@@ -78,7 +76,6 @@ const Sobre = () => {
         </div>
       </div>
 
-      {/* --- Seção de História (sem alterações) --- */}
       <div className="grid md:grid-cols-2 gap-12 items-center mb-20 mx-auto sm:px-4 lg:px-16 min-h-[60vh]">
         <div className="px-8 lg:px-16">
           <h3 className="text-3xl font-bold text-foreground mb-6">
@@ -132,11 +129,8 @@ const Sobre = () => {
         </div>
       </div>
 
-      {/* --- Seção de Valores (COM O CÓDIGO REFATORADO) --- */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto my-8 p-4 sm:p-8 md:p-12 lg:px-32 min-h-[60vh]">
         {values.map((value, index) => (
-          // O <Card> e <CardContent> foram combinados neste único <div>.
-          // Adicionamos padding (p-8), cantos arredondados (rounded-xl) e estilos de fundo/sombra.
           <div
             key={index}
             className="p-4 text-center rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"

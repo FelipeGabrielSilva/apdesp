@@ -55,10 +55,7 @@ const Home = () => {
         className="fixed inset-0 -z-10 h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,112,243,0.1),transparent)]"
         aria-hidden="true"
       />
-      {/* Hero Section */}
-      {/* MUDANÇA: Trocamos h-150 por min-h-screen e adicionamos flex para centralizar */}
       <section className="relative bg-gradient-hero text-primary-foreground overflow-hidden min-h-[60vh] flex flex-col items-center justify-center">
-        {/* Camada da imagem de fundo - sem alterações */}
         <div className="absolute inset-0">
           <Image
             src={heroImage}
@@ -68,7 +65,6 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
         </div>
 
-        {/* MUDANÇA: Simplificamos a estrutura interna. O flexbox da section já centraliza tudo. */}
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -115,8 +111,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      {/* MUDANÇA: Também aplicamos min-h-screen e flex para consistência */}
       <section className="py-20 flex flex-col items-center justify-center min-h-[60vh]">
         <div className="container px-4 mx-auto sm:px-8 lg:px-24">
           <div className="text-center mb-16">
@@ -129,7 +123,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* O seu grid responsivo já estava ótimo, mantivemos! */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <Card
@@ -143,8 +136,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* MUDANÇA: E o mesmo padrão aqui para a seção de CTA */}
       <section className="py-20 px-4 bg-gradient-sectionflex flex-col items-center justify-center min-h-[60vh]">
         <div className="container mx-auto text-center sm:px-8 lg:px-24">
           <div className="max-w-3xl mx-auto">
