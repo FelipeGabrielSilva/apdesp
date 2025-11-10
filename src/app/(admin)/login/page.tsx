@@ -84,18 +84,20 @@ const LoginPage = () => {
                 </div>
               </div>
 
-              <button
-                type="submit"
-                className="w-full rounded-lg bg-blue-600 py-3 text-lg font-semibold text-white shadow-sm transition-all duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              >
-                Entrar
-              </button>
+              <Link href="/administrativo">
+                <button
+                  type="submit"
+                  className="w-full rounded-lg bg-blue-600 py-3 text-lg font-semibold text-white shadow-sm transition-all duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
+                  Entrar
+                </button>
+              </Link>
             </form>
 
             <p className="mt-8 text-center text-sm text-slate-600">
               Ainda não tem uma conta?{" "}
               <Link
-                href="/administrativo/cadastro"
+                href="/cadastro"
                 className="font-medium text-blue-600 hover:underline"
               >
                 Cadastre-se

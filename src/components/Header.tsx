@@ -60,7 +60,7 @@ const Header = () => {
               asChild
               className="hidden sm:inline-flex"
             >
-              <Link href="/administrativo/login">
+              <Link href="/login">
                 <LogIn className="w-4 h-4 mr-2" />
                 Login
               </Link>
@@ -95,7 +95,7 @@ const Header = () => {
               ))}
               <div className="px-4 pt-2">
                 <Button variant="admin" size="sm" asChild className="w-full">
-                  <Link href="/administrativo/login">
+                  <Link href="/login">
                     <LogIn className="w-4 h-4 mr-2" />
                     Login
                   </Link>
