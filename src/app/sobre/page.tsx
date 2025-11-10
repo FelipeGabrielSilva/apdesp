@@ -3,6 +3,13 @@ import residenciaInclusiva from "@/assets/residencia-inclusiva/predio.jpg";
 import { Lightbulb, Target, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+// Metadata para SEO da página
+export const metadata: Metadata = {
+  title: "APDESP - Sobre",
+  description: "Conheça nossa história e associação"
+};
 
 const Sobre = () => {
   const values = [

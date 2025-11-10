@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { projects } from "@/data/Projetos"; // Importa nosso "banco de dados"
+import { projects } from "@/data/Projetos";
 import Image from "next/image";
 import { Calendar } from "lucide-react";
 

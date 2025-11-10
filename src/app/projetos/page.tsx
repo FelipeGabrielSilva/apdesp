@@ -1,21 +1,16 @@
-// Arquivo: app/projetos/page.tsx
-
+import { Button } from "@/components/ui/button";
+import { projects } from "@/data/Projetos";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { projects } from "@/data/Projetos"; // Importa nosso "banco de dados" de projetos
 
 export const metadata: Metadata = {
-  title: "Nossos Projetos | APDESP",
+  title: "APDESP - Projetos",
   description:
     "Conheça os projetos e iniciativas da APDESP que estão transformando vidas e promovendo a inclusão.",
 };
 
 const ProjetosPage = () => {
-  // REMOÇÃO: A lógica de getProjectData(params.slug) foi removida,
-  // pois esta página deve listar TODOS os projetos.
 
   return (
     <section id="projetos">

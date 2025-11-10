@@ -9,7 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).json({ error: "Nome do arquivo inválido" });
   }
 
-  // Caminho absoluto para a pasta pdf (fora do projeto Next)
   const pdfDir = path.join(process.cwd(), "public/pdf", "pdf");
   const pdfPath = path.join(pdfDir, file);
 

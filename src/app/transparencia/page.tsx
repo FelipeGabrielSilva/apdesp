@@ -7,7 +7,7 @@ import { Metadata } from "next";
 
 // Metadata para SEO da página
 export const metadata: Metadata = {
-  title: "Transparência | APDESP",
+  title: "APDESP - Transparência",
   description:
     "Acesse nossos relatórios, estatutos e demonstrações financeiras. A APDESP preza pela transparência e confiança.",
 };

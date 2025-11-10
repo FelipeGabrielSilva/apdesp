@@ -1,11 +1,10 @@
-import { Heart, Users, Gift, Building, Share2, Copy } from "lucide-react";
-import { Metadata } from "next";
-import { Button } from "@/components/ui/button"; // Verifique se o caminho do seu botão está correto
-import Link from "next/link";
 import Card from "@/components/Card";
+import { Button } from "@/components/ui/button";
+import { Building, Copy, Gift, Heart, Users } from "lucide-react";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Como Ajudar | APDESP",
+  title: "APDESP - Como Ajudar",
   description:
     "Sua ajuda transforma vidas. Doe, seja um voluntário ou torne-se um parceiro da APDESP.",
 };

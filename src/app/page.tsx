@@ -12,6 +12,13 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import Card from "@/components/Card";
+import { Metadata } from "next";
+
+// Metadata para SEO da página
+export const metadata: Metadata = {
+  title: "APDESP",
+};
+
 
 const Home = () => {
   const services = [
